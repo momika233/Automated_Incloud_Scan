@@ -41,6 +41,18 @@
 ```
 nuclei nuclei -rl 300 -bs 35 -c 30  -mhe 10 -ni -t nuclei-templates/ -t youtemplates/ -t ...
 ```
+### Can be modified to
+
+### The virtual address of the project
+```
+/home/runner/
+```
+```
+cd  /home/runner/ && git clone https://github.com/projectdiscovery/nuclei-templates.git
+cd  /home/runner/nuclei-templates  && git clone https://github.com/youtemplates
+...
+...
+```
 # Getting started
 ## Until the Actions begin,Then enjoy your coffee
 
