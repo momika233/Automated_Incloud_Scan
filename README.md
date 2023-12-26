@@ -3,10 +3,9 @@
 ### Each project of projectdiscovery was used for integration and deployed to Github for Action for automated vulnerability scanning
 ### The module used is:nuclei,nuclei-templates,subfinder,httpx
 
-Welcome to follow me
- <a href="https://github.com/momika233">
-    <img src="https://img.shields.io/github/followers/momika233?style=social">
-<a href="[https://twitter.com/momika233](https://twitter.com/momika233)">
+### Welcome to follow me
+## https://github.com/momika233
+## https://twitter.com/momika233
 
 # Remarks
 
