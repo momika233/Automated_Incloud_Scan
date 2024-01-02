@@ -52,10 +52,16 @@ jobs:
           echo "virustotal: [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]">>/home/runner/.config/subfinder/provider-config.yaml
 
         shell: bash
+
+      - name: Add nuclei templates
+        run: |
+           cd /home/runner/ && git clone https://github.com/projectdiscovery/nuclei-templates.git
+           cd /home/runner/nuclei-templates && git clone XXX
+        shell: bash
         
       - name: Running nuclei scaning
         run: |
-          subfinder -dL input/domain.txt | httpx -nc -t 300 -p 80,443,8080,8443,8090,9090 -silent | nuclei -rl 300 -bs 35 -c 30  -mhe 10 -ni -t nuclei-templates/ -stats -silent -severity critical,medium,high,low -o output/vuln.txt | tee output/vuln.txt
+          subfinder -dL input/domain.txt | httpx -nc -t 300 -p 80,443,8080,8443,8090,9090 -silent | nuclei -rl 300 -bs 35 -c 30  -mhe 10 -ni -t /home/runner/nuclei-templates/ -stats -silent -severity critical,medium,high,low -o output/vuln.txt | tee output/vuln.txt
         shell: bash
 
       - name: Sorting the output results
