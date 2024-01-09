@@ -57,6 +57,9 @@ cd  /home/runner/nuclei-templates  && git clone https://github.com/youtemplates
 ## Until the Actions begin,Then enjoy your coffee
 
 ## I'd like some coffee, too
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/momika233/Automated_Incloud_Scan.svg?variant=adaptive)](https://starchart.cc/momika233/Automated_Incloud_Scan)
+
 
 # Code of appreciation
 (I love coffee and am very addicted to coffee:v)
